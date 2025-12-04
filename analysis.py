@@ -4,6 +4,9 @@ A complete single-file solution for data sourcing, preparation, analysis,
 visualization, and LLM-based insights for the OpenAI LLM Analysis Quiz project.
 """
 
+# --------------------------
+# STUDENT EMAIL (Required)
+# --------------------------
 EMAIL = "ramyaiitm@gmail.com"
 print("Student Email:", EMAIL)
 
@@ -20,9 +23,9 @@ from openai import OpenAI
 # --------------------------
 # CONFIG
 # --------------------------
-DATA_FILE = "data.csv"        # put your dataset file name
-PLOT_FILE = "plot.png"        # visualization output
-MODEL = "gpt-4o-mini"         # or any allowed model
+DATA_FILE = "data.csv"
+PLOT_FILE = "plot.png"
+MODEL = "gpt-4o-mini"
 client = OpenAI()
 
 # --------------------------
@@ -47,7 +50,7 @@ def clean_data(df):
     return df
 
 # --------------------------
-# 3. DATA ANALYSIS
+# 3. BASIC ANALYSIS
 # --------------------------
 def basic_analysis(df):
     print("\nBasic Statistical Summary:")
@@ -57,7 +60,7 @@ def basic_analysis(df):
     print(df.corr())
 
 # --------------------------
-# 4. K-Means Clustering
+# 4. K-MEANS CLUSTERING
 # --------------------------
 def clustering(df, k=3):
     print("\nRunning K-Means clustering...")
@@ -120,7 +123,7 @@ Explain in bullet points.
     return insights
 
 # --------------------------
-# MAIN EXECUTION
+# MAIN
 # --------------------------
 if __name__ == "__main__":
     df = load_data()
@@ -128,7 +131,6 @@ if __name__ == "__main__":
     basic_analysis(df)
     df = clustering(df, k=3)
 
-    # choose any two numeric columns for plotting
     numeric_cols = df.select_dtypes(include=["number"]).columns
     if len(numeric_cols) >= 2:
         create_plot(df, numeric_cols[0], numeric_cols[1])
