@@ -4,6 +4,9 @@ A complete single-file solution for data sourcing, preparation, analysis,
 visualization, and LLM-based insights for the OpenAI LLM Analysis Quiz project.
 """
 
+EMAIL = "ramyaiitm@gmail.com"
+print("Student Email:", EMAIL)
+
 # --------------------------
 # IMPORTS
 # --------------------------
