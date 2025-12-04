@@ -7,7 +7,7 @@ visualization, and LLM-based insights for the OpenAI LLM Analysis Quiz project.
 # --------------------------
 # STUDENT EMAIL (Required)
 # --------------------------
-EMAIL = "ramyaiitm@gmail.com"
+EMAIL = "22f3002140@ds.study.iitm.ac.in"
 print("Student Email:", EMAIL)
 
 # --------------------------
